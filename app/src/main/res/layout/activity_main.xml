@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/daysLived_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="days lived"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/daysToLive_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/generate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Generate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Birth Date"
+        app:layout_constraintBottom_toTopOf="@+id/datePicker1"
+        app:layout_constraintStart_toStartOf="@+id/datePicker1" />
+
+    <DatePicker
+        android:id="@+id/datePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:endYear="2022"
+        android:startYear="1900"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/yearsToLive_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="years left to live"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/percentage_txt"
+        app:layout_constraintEnd_toEndOf="@+id/percentage_txt"
+        app:layout_constraintStart_toStartOf="@+id/percentage_txt" />
+
+    <TextView
+        android:id="@+id/daysToLive_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="days left to live"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/yearsToLive_txt"
+        app:layout_constraintEnd_toEndOf="@+id/yearsToLive_txt"
+        app:layout_constraintStart_toStartOf="@+id/yearsToLive_txt" />
+
+    <TextView
+        android:id="@+id/percentage_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:text="% lived"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/datePicker1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:checkedButton="@id/male_btn"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/generate_btn"
+        app:layout_constraintStart_toStartOf="@+id/datePicker1">
+
+        <RadioButton
+            android:id="@+id/male_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="40dp"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/female_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="40dp"
+            android:text="Female" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
